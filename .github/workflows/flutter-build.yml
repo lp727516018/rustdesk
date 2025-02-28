@@ -148,6 +148,7 @@ jobs:
           if ! $VCPKG_ROOT/vcpkg \
             install \
             --triplet ${{ matrix.job.vcpkg-triplet }} \
+            --cxxflags=${{ matrix.job.cxxflags }} \
             --x-install-root="$VCPKG_ROOT/installed"; then
             find "${VCPKG_ROOT}/" -name "*.log" | while read -r _1; do
               echo "$_1:"
@@ -311,6 +312,7 @@ jobs:
           if ! $VCPKG_ROOT/vcpkg \
             install \
             --triplet ${{ matrix.job.vcpkg-triplet }} \
+            --cxxflags=${{ matrix.job.cxxflags }} \
             --x-install-root="$VCPKG_ROOT/installed"; then
             find "${VCPKG_ROOT}/" -name "*.log" | while read -r _1; do
               echo "$_1:"
@@ -520,6 +522,7 @@ jobs:
           if ! $VCPKG_ROOT/vcpkg \
             install \
             --triplet ${{ matrix.job.vcpkg-triplet }} \
+            --cxxflags=${{ matrix.job.cxxflags }} \
             --x-install-root="$VCPKG_ROOT/installed"; then
             find "${VCPKG_ROOT}/" -name "*.log" | while read -r _1; do
               echo "$_1:"
@@ -1457,6 +1460,7 @@ jobs:
           if ! $VCPKG_ROOT/vcpkg \
             install \
             --triplet ${{ matrix.job.vcpkg-triplet }} \
+            --cxxflags=${{ matrix.job.cxxflags }} \
             --x-install-root="$VCPKG_ROOT/installed"; then
             find "${VCPKG_ROOT}/" -name "*.log" | while read -r _1; do
               echo "$_1:"
